@@ -1,0 +1,78 @@
+/* Reset CSS: 기본 여백 제거 및 박스 모델 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body 스타일: 기본 폰트 및 배경색 지정 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* 전체 배경색 */
+  color: #333; /* 기본 텍스트 색상 */
+}
+
+/* 링크 스타일: 기본적으로 밑줄 제거 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 버튼 스타일: 공통 버튼 모양 지정 */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+/* 공통 레이아웃 컨테이너 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 로고 스타일 */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* 네비게이션 메뉴 */
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    /* 링크 활성화 스타일 */
+    a {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #555;
+      &:hover {
+        color: #007bff; /* 링크 hover 시 강조 */
+      }
+    }
+  }
+}
+
+/* 메인 컨텐츠 영역 스타일 */
+.home-page,
+.product-page,
+.exchange-view,
+.bank-view,
+.community-page,
+.recommendation-page,
+.user-profile-page {
+  padding-top: 97px;  /* 네비게이션 바 높이만큼 상단 여백 추가 */
+  min-height: calc(100vh - 97px);
+}
